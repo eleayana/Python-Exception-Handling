@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>Python Notes</h1>
+<h2> Why should we learn Python?</h2>
+<ul>
+  <li>Very easy to learn with smooth syntax.</li>
+  <li> Code can be developed quickly</li>
+  <li>Interpreted language , no Compilation needed</li>
+  <li>Plenty of Job Opportunities if they have skills in Python</li>
+  <li> Used heavenly in some areas ie ML,DS,SC.</li>
+</ul>
+<h2>Python Coding Skills</h2>
+<h3>i. Intermediate Skills</h3>
+<h4>a)Exception Handling</h4>
+<p1>Exception means error detected at the time of program execution.</p1>
+<p2>However , while running a program , python generates an exception that should be handled to avoid your program to crash.</p2>
+<p>Examples:(Division by Zero,Addition of Two incompatible types, Accessing a file which doesn't exist).</p>
+<h3>Syntax:</h3>
+<pre>
+try:
+     #Code to execute
+except:
+      Code to execute in case of Errors
+ else: 
+     Code to execute in case of No Error
+finally:
+       code to execute in all cases
+       </pre>
+<h4>1st case: You are driving the road & the road is clear & you reach your destination without any trouble. This is called executing a program without exceptions.</h4>
+<h4> 2nd case: You are driving on the road and you see the accident on the road what you didn't expect to happen called exception.And your action of taking detour called Handling Exeptions.</h4>
+<h4> Syntax:</h4>
+<pre>
+try:
+    while road_is_clear()
+          drive()
+except: Accident as e:
+           take_detour()
+</pre>
+<pre>
+#Code1:
+1/0
+∴Output:ERROR
+ZeroDivisionError:division by Zero
+
+#Code2:
+x = input("Enter a no:5")
+y = input("Enter a no:8")
+z = int(x)/int(y)
+print("Division is :", z)
+∴ Output: Division is 13
+
+#Code 3:
+x = input("Enter a no:5")
+y = input("Enter a no:8")
+try:
+    z= int(x) / int(y)
+except Exception as e:
+    print('Exception occured:',e)
+    z = None
+ print("Division is:",z)
+ ∴ Output: Division is:None
+ 
+ #Code 4:
+x = input("Enter a no:5")
+y = input("Enter a no:8")
+try:
+   z = x / int(y)
+except ZerodivisionError as e:
+      print('Division by ZeroException')
+      Z = None
+print("Division is:",z)
+∴ Output: ERROR
+</pre>
+<h5>#How to raise an exception</h5>
+<pre>
+try:
+    raise MemoryError('memory error')
+except MemoryError as e:
+print(e)
+∴ Output: Memory Error
+</pre>
+
+# Class Accident(Exception)
+<pre>
+ class Accident(Exception):
+    def __init__(self, msg):
+         self.msg = msg
+    def print_exception(self):
+       print("Userdefined Exception:")
+try: 
+    raise Accident("Crash between 2 cars")
+except Accident as e:
+    e.print_exception()
+    print(e)
+∴ Output:Userdefined Exception:Crash between  2 cars
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
